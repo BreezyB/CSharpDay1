@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineWeek4Day1
 {
-    internal class Program
+    public class Program
     {
         // private => access modifier
         // static => class/member modifier
@@ -166,3 +166,9 @@ namespace OnlineWeek4Day1
         }
     }
 }
+
+//public => whole program
+//private => only that class
+//internal => only that assembly
+//protected => only that class and any class that directly inherits
+//internal protected => only that assembly OR {protected}
