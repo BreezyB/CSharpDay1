@@ -53,6 +53,7 @@ namespace OnlineWeek4Day1
             foreach (AbstractClass x in myList)
             {
                 x.AbstractMethod();
+                x.MethodOnAbstract();
                 Console.WriteLine(x.InheritedString + " - " + x.AbstractString);
             }
 
@@ -133,6 +134,11 @@ namespace OnlineWeek4Day1
 
         //CANNOT declare body, must be overwritten
         public abstract void AbstractMethod();
+
+        public virtual void MethodOnAbstract()
+        {
+            Console.WriteLine("Calling from the AbstractClass");
+        }
     }
 
     //Child | Derived class
@@ -158,6 +164,11 @@ namespace OnlineWeek4Day1
         public override void AbstractMethod()
         {
             Console.WriteLine("Running method on ChildClass2");
+        }
+
+        public override void MethodOnAbstract()
+        {
+            Console.WriteLine("Override on ChildClass2");
         }
 
         public ChildClass2()
